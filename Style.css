@@ -1,0 +1,29 @@
+
+element.style {
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+body {
+    background-color: #fff;
+    color: rgba(0,0,0,.87);
+    font-family: Roboto,HelveticaNeue,Arial,sans-serif;
+    font-size: small;
+    margin: 0;
+    position: relative;
+    -webkit-font-smoothing: auto;
+}
+body {
+    height: 100%;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0,0,0,0.87);
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    margin: 0;
+    text-size-adjust: 100%;
+}
