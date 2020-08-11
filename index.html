@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src='index.js'></script>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <title>Document</title>
 </head>
 <body>
@@ -12,9 +16,10 @@
     action    =  "/api/file"
     method    =  "post"
 >
-<input type="file" name="userFile" />
+<input type="file" name="userFile" id="fichier" multiple/>
 <input type="submit" value="Upload File" name="submit">
 </form>
+<div id="photos"></div>
 </body>
 </html>
 

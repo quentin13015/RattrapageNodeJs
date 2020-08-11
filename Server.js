@@ -1,17 +1,24 @@
 const express = require("express");
 const multer = require('multer');
+const http = require('http').Server(express);
 const app = express();
 const fs = require('fs');
 const path = require('path');
+const io = require('socket.io')(http);
 const mongoose = require ("mongoose");
-
+app.use('', express.static(__dirname));
 mongoose.connect('mongodb://localhost/', function(err) {
 if (err) { throw err; }
 });
 
-
+http.listen(8081, "127.0.0.1");
 app.get('/', function (req, res) {
     res.sendFile(__dirname + "/index.html");
+});
+io.on('connection', function (socket) {
+    socket.on('nouveau', function (nouveau) {
+        io.emit('nouveau', nouveau);
+    });
 });
 
 var storage = multer.diskStorage({
