@@ -3,6 +3,9 @@ let socket = io.connect('http://localhost:8081')
         function nouveau(photo) {
             $('#photos').append($('<img src="'+photo+'"/>'))
         }
+        $(document).on('click', 'img', function () {
+            this.remove();
+        })
         $(function () {
             $('#fichier').bind('change', function (e) {
                 let i = 0
@@ -17,3 +20,4 @@ let socket = io.connect('http://localhost:8081')
                 }
             })
         })
+        
